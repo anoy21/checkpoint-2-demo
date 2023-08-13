@@ -137,13 +137,11 @@ body {
 }
 
 .aclass:hover {
-  transform: scale(1.1);
   transition: 500ms;
   color: #8BE8E5;
 }
 
 .aclass:active {
-  transform: scale(0.96);
   color: white;
 }
 
@@ -382,5 +380,12 @@ position: relative;
   margin-left: 30px;
   font-family: 'Roboto', sans-serif;
   text-align: left;
+}
+
+ul li > button {
+  border: 0px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 130px;
+  background-color: transparent;
 }
 

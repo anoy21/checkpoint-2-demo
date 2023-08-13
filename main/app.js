@@ -109,18 +109,14 @@ TweenLite.to(".texts3", {
   ease: Back.easeIn.config(1.7),
   })
 
-  const abt = document.getElementById("about")
-  const contacts = document.getElementById("contacts")
-  const tl = gsap.timeline({
-    paused: true, 
-    reversed: true,
-  });
-  abt.addEventListener('click', function () {
-    if (tl.reversed()) {
-        tl.play();
-    } else {
-        tl.reverse();
-    }
+const abt = document.getElementById("about")
+const tl1 = gsap.timeline({ paused: true, reversed: true,});
+tl1.to(abt, {
+  x: "400px",
+  duration: 2
 })
 
-
+abt.addEventListener("click", myFunction); 
+function myFunction () {
+  tl1.reversed() ? tl1.play() : tl1.reverse();
+}
